@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cc.buddies.app.appdemo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- <uses-feature android:name="android.hardware.camera" /> -->
+    <!-- <uses-feature android:name="android.hardware.camera.autofocus" /> -->
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.HandlerActivity" />
+        <activity android:name=".activity.SharedPreferenceActivity" />
+        <activity android:name=".activity.SQLiteActivity" />
+        <activity android:name=".activity.DynamicPermissionActivity" />
+        <activity android:name=".activity.MessengerActivity" />
+        <activity android:name=".activity.ServiceActivity" />
+        <activity android:name=".activity.AIDLActivity" />
+        <activity android:name=".activity.DispatchTouchActivity" />
+        <activity android:name=".activity.ImageActivity" />
+        <activity android:name=".activity.RetrofitActivity" />
+        <activity android:name=".activity.RxJavaActivity" />
+        <activity android:name=".activity.EventBusActivity" />
+        <activity android:name=".activity.CameraActivity" />
+        <activity android:name=".activity.CameraNewActivity" />
+        <activity android:name=".activity.Camera2Activity" />
+        <activity android:name=".activity.GestureActivity" />
+        <activity
+            android:name=".home.activity.HomeActivity"
+            android:label="@string/app_name_home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- MVP -->
+        <activity android:name=".mvp.activity.MvpActivity" />
+
+        <service
+            android:name=".service.MessengerService"
+            android:process=":remote" />
+        <service
+            android:name=".service.MyService"
+            android:exported="false" />
+        <!-- exported: 是否支持其它应用调用当前组件。 默认值：如果包含有intent-filter 默认值为true; 没有intent-filter默认值为false。 -->
+        <service
+            android:name=".service.MyAIDLService"
+            android:exported="false"
+            android:process=":aidl" />
+
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

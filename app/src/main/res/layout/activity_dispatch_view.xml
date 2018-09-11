@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DispatchTouchActivity">
+
+    <cc.buddies.app.appdemo.view.MyViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_dark">
+
+        <cc.buddies.app.appdemo.view.MyView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorAccent"/>
+
+        <!--<Button
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="Button"
+            android:background="@color/colorAccent"/>-->
+
+    </cc.buddies.app.appdemo.view.MyViewGroup>
+
+</LinearLayout>
