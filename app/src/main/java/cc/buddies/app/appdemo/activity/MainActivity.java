@@ -87,4 +87,8 @@ import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
      public void onClickHome(View view) {
         startActivity(new Intent(this, NavigationActivity.class));
      }
+
+     public void onClickDYLoading(View view) {
+        startActivity(new Intent(this, DYLoadingActivity.class));
+     }
  }

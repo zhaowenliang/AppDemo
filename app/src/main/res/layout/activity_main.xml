@@ -121,5 +121,11 @@
             android:onClick="onClickHome"
             android:text="Home Activity" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickDYLoading"
+            android:text="DYLoading Activity" />
+
     </LinearLayout>
 </ScrollView>

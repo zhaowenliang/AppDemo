@@ -46,23 +46,15 @@ public class Camera2SurfaceView extends SurfaceView implements SurfaceHolder.Cal
     };
 
     public Camera2SurfaceView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public Camera2SurfaceView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public Camera2SurfaceView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public Camera2SurfaceView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }
 
