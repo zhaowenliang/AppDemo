@@ -263,13 +263,14 @@ public class DYLoadingView extends View {
 //            float scaleFraction = 1.0f / scaleStartFraction * fraction;     // 百分比转换[0, scaleStartFraction] -> [0, 1]
             float scaleFraction = (fraction * 1.0f) / scaleStartFraction;
 
-            ltrBallRadius = ltrInitRadius * ((ltrScale - 1) * scaleFraction + 1);
-            rtlBallRadius = rtlInitRadius * ((rtlScale - 1) * scaleFraction + 1);
+            ltrBallRadius = ltrInitRadius * (1 + (ltrScale - 1) * scaleFraction);   // 总的变化倍率-基本大小倍率=差异变化倍率，差异变化倍率*当前阶段进度=当前进度变化倍率
+            rtlBallRadius = rtlInitRadius * (1 + (rtlScale - 1) * scaleFraction);
         } else if (fraction >= scaleEndFraction) {          // 动画进度[scaleEndFraction, 1]，球大小由ltrScale/rtlScale倍逐渐恢复至1倍
-            float scaleFraction = (fraction - 1) / (scaleEndFraction - 1);  // 百分比转换，[scaleEndFraction, 1] -> [1, 0]
+//            float scaleFraction = (fraction - 1) / (scaleEndFraction - 1);  // 百分比转换，[scaleEndFraction, 1] -> [1, 0]
+            float scaleFraction = (1 - fraction) / (1 - scaleEndFraction);      // [scaleEndFraction, 1]阶段和[0, scaleStartFraction]阶段对称，在对称的位置缩放倍率是相同的。
 
-            ltrBallRadius = ltrInitRadius * ((ltrScale - 1) * scaleFraction + 1);
-            rtlBallRadius = rtlInitRadius * ((rtlScale - 1) * scaleFraction + 1);
+            ltrBallRadius = ltrInitRadius * (1 + (ltrScale - 1) * scaleFraction);
+            rtlBallRadius = rtlInitRadius * (1 + (rtlScale - 1) * scaleFraction);
         } else {                                            // 动画进度[scaleStartFraction, scaleEndFraction]，球保持缩放后的大小
             ltrBallRadius = ltrInitRadius * ltrScale;
             rtlBallRadius = rtlInitRadius * rtlScale;
