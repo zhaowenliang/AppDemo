@@ -133,5 +133,11 @@
             android:onClick="onClickRVLayoutManager"
             android:text="RVLayoutManager Activity" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickFragmentResult"
+            android:text="使用Fragment封装onActivityResult" />
+
     </LinearLayout>
 </ScrollView>

@@ -95,4 +95,8 @@ import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
      public void onClickRVLayoutManager(View view) {
          startActivity(new Intent(this, RVLayoutManagerActivity.class));
      }
+
+     public void onClickFragmentResult(View view) {
+         startActivity(new Intent(this, FragmentResultActivity.class));
+     }
  }
