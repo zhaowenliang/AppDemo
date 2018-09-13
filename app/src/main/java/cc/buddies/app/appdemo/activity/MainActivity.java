@@ -91,4 +91,8 @@ import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
      public void onClickDYLoading(View view) {
         startActivity(new Intent(this, DYLoadingActivity.class));
      }
+
+     public void onClickRVLayoutManager(View view) {
+         startActivity(new Intent(this, RVLayoutManagerActivity.class));
+     }
  }

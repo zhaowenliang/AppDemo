@@ -127,5 +127,11 @@
             android:onClick="onClickDYLoading"
             android:text="DYLoading Activity" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickRVLayoutManager"
+            android:text="RVLayoutManager Activity" />
+
     </LinearLayout>
 </ScrollView>
