@@ -20,13 +20,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.HandlerActivity" />
         <activity android:name=".activity.SharedPreferenceActivity" />
         <activity android:name=".activity.SQLiteActivity" />
@@ -57,6 +60,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!-- MVP -->
         <activity android:name=".mvp.activity.MvpActivity" />
 
@@ -72,11 +79,9 @@
             android:exported="false"
             android:process=":aidl" />
 
-        <activity
-            android:name=".activity.NavigationActivity"
-            android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar" />
-
+        <service
+            android:name=".service.SplashImageIntentService"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -12,7 +12,7 @@ import java.lang.ref.WeakReference;
 @SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {
 
-    private Handler mHandler;
+    protected Handler mHandler;
 
     // 静态内部类，不能持有外部类对象引用。
     // 静态内部类+弱引用。首先介绍下静态内部类。静态内部类，其实可以脱离外部类了，他们是没有联系的。
@@ -38,7 +38,7 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public void handleMessage(Message msg) {
+    protected void handleMessage(Message msg) {
         // 子类实现，可接收Handler消息处理Message。
     }
 

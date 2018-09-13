@@ -9,6 +9,12 @@ import cc.buddies.app.appdemo.MyApplication;
 import cc.buddies.app.appdemo.R;
 import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
 
+
+ /**
+  * ThisTime: 229
+  * TotalTime: 229
+  * WaitTime: 238
+  */
  public class MainActivity extends BaseActivity {
 
     @Override
@@ -98,5 +104,13 @@ import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
 
      public void onClickFragmentResult(View view) {
          startActivity(new Intent(this, FragmentResultActivity.class));
+     }
+
+     @Override
+     public void onBackPressed() {
+         super.onBackPressed();
+         // 完全退出，启动应用重新初始化Application。
+         MyApplication application = (MyApplication) getApplication();
+         application.exit();
      }
  }
