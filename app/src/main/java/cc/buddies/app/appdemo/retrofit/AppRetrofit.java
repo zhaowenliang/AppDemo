@@ -1,7 +1,5 @@
 package cc.buddies.app.appdemo.retrofit;
 
-import java.util.Collections;
-
 import okhttp3.CipherSuite;
 import okhttp3.ConnectionSpec;
 import okhttp3.OkHttpClient;
@@ -15,12 +13,11 @@ public class AppRetrofit {
     public static Retrofit retrofit() {
         if (retrofit == null) {
             // Arrays.asList(ConnectionSpec.MODERN_TLS, ConnectionSpec.COMPATIBLE_TLS)
-            ConnectionSpec connectionSpec = getConnectionSpec();
-
+//            ConnectionSpec connectionSpec = getConnectionSpec();
 
             OkHttpClient okHttpClient = new OkHttpClient.Builder()
                     .addInterceptor(new LoggingInterceptor())
-                    .connectionSpecs(Collections.singletonList(connectionSpec))
+//                    .connectionSpecs(Collections.singletonList(connectionSpec))
                     .build();
             retrofit = new Retrofit.Builder()
                     .baseUrl(ServerConfig.BASE_URL)
