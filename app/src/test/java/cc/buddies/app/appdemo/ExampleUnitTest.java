@@ -20,7 +20,7 @@ public class ExampleUnitTest {
 
 
 //        System.out.println("斐波那契数列的前20项为：");
-        long currentTimeMillis = System.currentTimeMillis();
+//        long currentTimeMillis = System.currentTimeMillis();
         // 循环方式
 //        testFibonacci1(45);
         // 递归方式
@@ -31,9 +31,13 @@ public class ExampleUnitTest {
 //        }
 
         // 快速排序
-        quickSort();
-        System.out.println("使用时间： " + (System.currentTimeMillis() - currentTimeMillis));
+//        quickSort();
+//        System.out.println("使用时间： " + (System.currentTimeMillis() - currentTimeMillis));
         // 递归45项9518毫秒
+
+
+        DemoFuture demoFuture = new DemoFuture();
+        demoFuture.demo();
     }
 
 
