@@ -8,6 +8,7 @@ import cc.buddies.app.appdemo.BaseActivity;
 import cc.buddies.app.appdemo.MyApplication;
 import cc.buddies.app.appdemo.R;
 import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
+import cc.buddies.app.appdemo.service.FloatButtonService;
 
 
  /**
@@ -106,6 +107,10 @@ import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
          startActivity(new Intent(this, FragmentResultActivity.class));
      }
 
+     public void onClickFloatWindow(View view) {
+         startActivity(new Intent(this, FloatWindowActivity.class));
+     }
+
      @Override
      public void onBackPressed() {
          super.onBackPressed();
@@ -113,4 +118,5 @@ import cc.buddies.app.appdemo.mvp.activity.MvpActivity;
          MyApplication application = (MyApplication) getApplication();
          application.exit();
      }
+
  }

@@ -1,6 +1,5 @@
 package cc.buddies.app.treasury.permission;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -8,15 +7,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Binder;
 import android.os.Build;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Size;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.content.PermissionChecker;
-import android.util.Log;
 
 import cc.buddies.app.treasury.utils.LogUtils;
 
@@ -71,6 +67,10 @@ public class CheckPermissionUtils {
                 })
                 .setNegativeButton("取消", null)
                 .show();
+    }
+
+    public static boolean checkManageOverlayPermission(Context context) {
+        return Build.VERSION.SDK_INT < Build.VERSION_CODES.M || Settings.canDrawOverlays(context);
     }
 
 }

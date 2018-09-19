@@ -139,5 +139,11 @@
             android:onClick="onClickFragmentResult"
             android:text="使用Fragment封装onActivityResult" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickFloatWindow"
+            android:text="开启浮动窗口" />
+
     </LinearLayout>
 </ScrollView>
