@@ -37,7 +37,7 @@ public class FloatButtonService extends Service {
         mWindowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         mLayoutParams = new WindowManager.LayoutParams();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) { // 8.0新特性
             mLayoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
         } else {
             mLayoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
